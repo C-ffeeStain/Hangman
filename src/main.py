@@ -108,6 +108,19 @@ def main(first_time: bool = True) -> None:
                 guessed_letters.append(letter)
                 sleep(0.75)
                 continue
+            elif letter == word:
+                print(f"You guessed the word! The word was: {word}\n")
+                sleep(0.75)
+                if input("Would you like to play again (y/n)? ").lower() in (
+                    "yes",
+                    "y",
+                    "true",
+                    "t",
+                ):
+                    main(False)
+                else:
+                    sys.exit()
+
             else:
                 # replace the dashes with the letter
                 for i, l in enumerate(letters):
