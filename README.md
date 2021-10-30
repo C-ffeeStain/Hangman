@@ -36,5 +36,3 @@ py -m venv venv
 pip install -r requirements.txt
 ```
 4. You're finished! Now, you can execute the main file by running `py src/main.py` while in the Hangman folder.
-
-## Development
