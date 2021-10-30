@@ -36,3 +36,6 @@ py -m venv venv
 pip install -r requirements.txt
 ```
 4. You're finished! Now, you can execute the main file by running `py src/main.py` while in the Hangman folder.
+
+## P-Bug Builds
+Probably Buggy, or P-Bug for short, builds are special versions of the program that are untested, so they most likely contain bugs. Feel free to download these, but please report any bugs to this link.
