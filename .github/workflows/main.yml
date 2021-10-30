@@ -24,10 +24,11 @@ jobs:
           # Directory containing source code (optional requirements.txt).
           path: src
           
-      - name: Testing
+      - name: Move release
         run: |
-          cd src
+          cd src/dist
           ls
+          move src/dist/windows/main.exe Hangman.exe
       - name: Upload WIP Release
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
@@ -36,5 +37,4 @@ jobs:
           prerelease: true
           title: "Development Build"
           files: |
-            LICENSE.txt
-            *.jar
+            Hangman.exe
