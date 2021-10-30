@@ -23,3 +23,17 @@ jobs:
         with:
           # Directory containing source code (optional requirements.txt).
           path: src
+          
+      - name: Testing
+        run: |
+          ls
+      - name: Upload WIP Release
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
+          files: |
+            LICENSE.txt
+            *.jar
